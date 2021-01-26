@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<MPD xmlns="urn:mpeg:dash:schema:mpd:2011" minBufferTime="PT1.500S" type="static" mediaPresentationDuration="PT0H3M51.530S" maxSegmentDuration="PT0H0M14.334S" profiles="urn:mpeg:dash:profile:full:2011">
+ <Period duration="PT0H3M51.530S">
+  <AdaptationSet segmentAlignment="true" subsegmentAlignment="true" maxWidth="1920" maxHeight="1080" maxFrameRate="24" par="16:9" lang="en" startWithSAP="1" bitstreamSwitching="true">
+   <Representation id="1080p" mimeType="video/mp4" codecs="avc1.640028,mp4a.40.2" width="1920" height="1080" frameRate="24" sar="1:1" bandwidth="2867158">
+    <AudioChannelConfiguration schemeIdUri="urn:mpeg:dash:23003:3:audio_channel_configuration:2011" value="2"/>
+    <SegmentTemplate media="1080p_$Number$.m4s" initialization="1080p_init.mp4" timescale="12288" startNumber="1" duration="122880"/>
+   </Representation>
+   
+   <Representation id="720p" mimeType="video/mp4" codecs="avc1.64001F,mp4a.40.2" width="1280" height="720" frameRate="24" sar="1:1" bandwidth="1343898">
+    <AudioChannelConfiguration schemeIdUri="urn:mpeg:dash:23003:3:audio_channel_configuration:2011" value="2"/>
+    <SegmentTemplate media="720p_$Number$.m4s" initialization="720p_init.mp4" timescale="12288" startNumber="1" duration="122880"/>
+   </Representation>
+   
+   <Representation id="480p" mimeType="video/mp4" codecs="avc1.64001E,mp4a.40.2" width="854" height="480" frameRate="24" sar="1:1" bandwidth="716257">
+    <AudioChannelConfiguration schemeIdUri="urn:mpeg:dash:23003:3:audio_channel_configuration:2011" value="2"/>
+    <SegmentTemplate media="480p_$Number$.m4s" initialization="480p_init.mp4" timescale="12288" startNumber="1" duration="122880"/>
+   </Representation>
+   
+   <Representation id="360p" mimeType="video/mp4" codecs="avc1.64001E,mp4a.40.2" width="640" height="360" frameRate="24" sar="1:1" bandwidth="474337">
+    <AudioChannelConfiguration schemeIdUri="urn:mpeg:dash:23003:3:audio_channel_configuration:2011" value="2"/>
+    <SegmentTemplate media="360p_$Number$.m4s" initialization="360p_init.mp4" timescale="12288" startNumber="1" duration="122880"/>
+   </Representation>
+   
+   <Representation id="240p" mimeType="video/mp4" codecs="avc1.640015,mp4a.40.2" width="426" height="240" frameRate="24" sar="1:1" bandwidth="254951">
+    <AudioChannelConfiguration schemeIdUri="urn:mpeg:dash:23003:3:audio_channel_configuration:2011" value="2"/>
+    <SegmentTemplate media="240p_$Number$.m4s" initialization="240p_init.mp4" timescale="12288" startNumber="1" duration="122880"/>
+   </Representation>
+  </AdaptationSet>
+
+  <AdaptationSet id="English" kind="subtitles" contentType="text" lang="en" mimeType="text/vtt">
+    <Role value="main" />
+    <Label>English</Label>
+    <Representation id="subs_en" bandwidth="256">
+      <BaseURL>../subs/english.vtt</BaseURL>
+    </Representation>
+  </AdaptationSet>
+  
+  <AdaptationSet id="Espanol" kind="subtitles" contentType="text" lang="es" mimeType="text/vtt">
+    <Label>Espanol</Label>
+    <Representation id="subs_es" bandwidth="256">
+      <BaseURL>../subs/spanish.vtt</BaseURL>
+    </Representation>
+  </AdaptationSet>
+  
+  <AdaptationSet id="Français" kind="subtitles" contentType="text" lang="fr" mimeType="text/vtt">
+    <Label>Français</Label>
+    <Representation id="subs_fr" bandwidth="256">
+      <BaseURL>../subs/french.vtt</BaseURL>
+    </Representation>
+  </AdaptationSet>
+ </Period>
+</MPD>
