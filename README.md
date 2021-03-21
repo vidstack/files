@@ -1,4 +1,4 @@
-# Vidstack Media
+# Vidstack Media Files
 
 This repository contains media files that are used for testing and demonstration purposes 
 throughout Vidstack's source code, examples and public content.
